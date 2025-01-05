@@ -1,0 +1,9 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/mongo-client" // 별도의 클라이언트 생성
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_DATABASE_URL")
+}
